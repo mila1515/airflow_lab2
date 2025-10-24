@@ -1,11 +1,16 @@
 # File: src/model_development.py
 import os
+import sys
 import pickle
 import pandas as pd
 from sklearn.compose import make_column_transformer
 from sklearn.linear_model import LogisticRegression
 from sklearn.model_selection import train_test_split
 from sklearn.preprocessing import StandardScaler
+
+
+
+sys.path.append(os.path.join(os.path.dirname(__file__), 'src'))
 
 # ---------- Directories ----------
 BASE_DIR = os.getenv("AIRFLOW_HOME", os.path.expanduser("~/airflow"))
